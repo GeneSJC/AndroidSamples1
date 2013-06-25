@@ -6,11 +6,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 public class Util
 {
+	public final static String DRAGDROP_BOOLEAN_KEY = "dragDrop_boolean";
 
 	public static void myToast(View v, String msg)
 	{
@@ -19,9 +21,19 @@ public class Util
 
 	public static void goToActivity(View v, Class activityClass)
 	{
+		goToActivity(v, activityClass, null);
+	}
+
+	public static void goToActivity(View v, Class activityClass, Bundle bundle)
+	{
 		myToast(v, "Now will go to Activity: " + activityClass.getSimpleName());
 
 		Intent intent = new Intent(v.getContext(), activityClass);
+
+		if ( bundle != null)
+		{
+			intent.putExtras(bundle);
+		}
 
 		v.getContext().startActivity(intent);
 	}

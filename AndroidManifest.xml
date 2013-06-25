@@ -23,15 +23,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.androidsamples.activity.DragDropActivity"
+            android:name="com.androidsamples.activity.DrawableDragDropActivity"
             android:label="DragDropActivity" >
         </activity>
         <activity
-            android:name="com.androidsamples.activity.ExampleListActivity"
+            android:name="com.androidsamples.activity.DemoListActivity"
             android:label="ExampleListActivity" >
         </activity>
         <activity
-            android:name="com.androidsamples.activity.DemoTabs"
+            android:name="com.androidsamples.activity.DemoTabsActivity"
             android:label="DemoTabs" >
         </activity>
     </application>

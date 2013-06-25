@@ -38,19 +38,28 @@ public class DemoButtonsActivity extends Activity
 			}
 		});
 
-		connectButtonToActivity (R.id.list_button, ExampleListActivity.class );
-		connectButtonToActivity (R.id.background_button, DragDropActivity.class);
-		connectButtonToActivity (R.id.tabs_button, DemoTabs.class);
+		connectButtonToActivity (R.id.list_button, DemoListActivity.class );
+		connectButtonToActivity (R.id.tabs_button, DemoTabsActivity.class);
+		connectButtonToActivity (R.id.drawables_gradient_button, DrawableDragDropActivity.class);
+
+		Bundle paramsBundle = new Bundle();
+		paramsBundle.putBoolean(Util.DRAGDROP_BOOLEAN_KEY, true);
+		connectButtonToActivity (R.id.drawables_dragdrop_button, DrawableDragDropActivity.class, paramsBundle);
 	}
 
 	private void connectButtonToActivity(int androidResourceId, final Class activityClass)
+	{
+		connectButtonToActivity(androidResourceId, activityClass, null);
+	}
+
+	private void connectButtonToActivity(int androidResourceId, final Class activityClass, final Bundle bundle)
 	{
 		final Button button = (Button) findViewById(androidResourceId);
 		button.setOnClickListener(new View.OnClickListener()
 		{
 			public void onClick(View v) {
 
-				Util.goToActivity(v, activityClass);
+				Util.goToActivity(v, activityClass, bundle);
 			}
 		});
 
