@@ -24,6 +24,7 @@
      android:id="@+id/list_button"
      android:layout_height="wrap_content"
      android:layout_width="fill_parent"
+     android:background="@drawable/button_background"
      android:text="List Activity"
      />
 
