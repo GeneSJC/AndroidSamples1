@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,6 +18,11 @@ public class Util
 	public static void myToast(View v, String msg)
 	{
 		Toast.makeText(v.getContext(), msg, Toast.LENGTH_LONG).show();
+	}
+
+	public static void debug1 ( String msg)
+	{
+		Log.d("DEBUG1", msg);
 	}
 
 	public static void goToActivity(View v, Class activityClass)
