@@ -1,4 +1,4 @@
-package com.androidsamples.util;
+package com.demo.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

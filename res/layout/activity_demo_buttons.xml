@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+     android:id="@+id/layout_top"
      >
 
      <Button
@@ -56,4 +57,20 @@
      android:text="Drawable Drag'n'Drop"
      />
 
+     
+     <Button 
+     android:id="@+id/circle_drawing_activity_button"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:text="CircleDrawingActivity"
+     />
+
+     
+     <Button 
+     android:id="@+id/dnd_with_util_btn"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:text="Drag n Drop Sun via DnD-Util"
+     />
+     
 </LinearLayout>

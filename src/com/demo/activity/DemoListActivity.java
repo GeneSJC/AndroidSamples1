@@ -1,4 +1,4 @@
-package com.androidsamples.activity;
+package com.demo.activity;
 
 import android.app.ListActivity;
 import android.os.Bundle;

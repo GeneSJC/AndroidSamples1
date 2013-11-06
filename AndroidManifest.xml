@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.androidsamples.activity"
+    package="com.demo.activity"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.androidsamples.activity.DemoButtonsActivity"
+            android:name="com.demo.activity.DemoButtonsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +23,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.androidsamples.activity.DrawableDragDropActivity"
+            android:name="com.demo.activity.DrawableActivity"
             android:label="DragDropActivity" >
         </activity>
         <activity
-            android:name="com.androidsamples.activity.DemoListActivity"
+            android:name="com.demo.activity.DrawableDragDropActivity"
+            android:label="DragDropActivity" >
+        </activity>
+        <activity
+            android:name="com.demo.activity.DemoListActivity"
             android:label="ExampleListActivity" >
         </activity>
         <activity
-            android:name="com.androidsamples.activity.DemoTabsActivity"
+            android:name="com.demo.activity.DemoTabsActivity"
+            android:label="DemoTabs" >
+        </activity>
+        <activity
+            android:name="com.demo.activity.CircleDrawingActivity"
             android:label="DemoTabs" >
         </activity>
     </application>

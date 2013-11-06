@@ -1,15 +1,17 @@
-package com.androidsamples.activity;
+package com.demo.activity;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 import android.app.Activity;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-import com.androidsamples.util.Util;
+import com.demo.util.Util;
 
 public class DemoButtonsActivity extends Activity
 {
@@ -35,6 +37,11 @@ public class DemoButtonsActivity extends Activity
 			public void onClick(View v)
 			{
 				Util.myToast(v, "Simple toast");
+
+				LinearLayout layout = (LinearLayout) findViewById(R.id.layout_top);
+				layout.setBackgroundResource(R.drawable.translate);
+				TransitionDrawable transition = (TransitionDrawable) layout.getBackground();
+				transition.startTransition(5000);
 			}
 		});
 
@@ -45,6 +52,9 @@ public class DemoButtonsActivity extends Activity
 		Bundle paramsBundle = new Bundle();
 		paramsBundle.putBoolean(Util.DRAGDROP_BOOLEAN_KEY, true);
 		connectButtonToActivity (R.id.drawables_dragdrop_button, DrawableDragDropActivity.class, paramsBundle);
+		
+		connectButtonToActivity(R.id.circle_drawing_activity_button, CircleDrawingActivity.class);
+		connectButtonToActivity(R.id.dnd_with_util_btn, DrawableActivity.class);
 	}
 
 	private void connectButtonToActivity(int androidResourceId, final Class activityClass)

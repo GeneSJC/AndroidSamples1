@@ -1,15 +1,14 @@
-package com.androidsamples.activity;
+package com.demo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.androidsamples.util.Util;
+import com.demo.util.Util;
 
 public class DrawableDragDropActivity extends Activity
 {
@@ -32,7 +31,7 @@ public class DrawableDragDropActivity extends Activity
 
 		Util.debug1("enableDragDrop is TRUE, so adding DnD support in activity ");
 
-		setDragDrop(R.id.my_sky_layout, R.id.sun );
+		setDragDrop(R.id.my_sky_layout, R.id.sun );  // background layout and element id to drag
 	}
 
 	private boolean isDragDropEnabled()
